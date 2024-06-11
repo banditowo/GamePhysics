@@ -17,7 +17,8 @@ public class MarbleController : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.AddForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * forceMultiplier);
+            Vector3 forceDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            rb.AddForce(forceDirection * forceMultiplier);
         }
     }
 }
